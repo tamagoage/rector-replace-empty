@@ -2,7 +2,18 @@
     "name": "tamagoage/rector-replace-empty",
     "description": "Rector to replace empty to count",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "tamagoage\\Rector\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "tamagoage\\Rector\\": "tests/"
+        }
+    },
     "require-dev": {
-        "rector/rector": "^1.2"
+        "rector/rector": "^1.2",
+        "phpunit/phpunit": "^9.5"
     }
 }
