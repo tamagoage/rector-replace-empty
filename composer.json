@@ -1,0 +1,8 @@
+{
+    "name": "tamagoage/rector-replace-empty",
+    "description": "Rector to replace empty to count",
+    "license": "MIT",
+    "require-dev": {
+        "rector/rector": "^1.2"
+    }
+}
