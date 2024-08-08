@@ -6,7 +6,11 @@ namespace tamagoage\Rector\EmptyToCountRector;
 
 use Iterator;
 use Rector\Testing\PHPUnit\AbstractRectorTestCase;
+use tamagoage\Rector\EmptyToCountRector;
 
+/**
+ * @covers EmptyToCountRector
+ */
 final class EmptyToCountTest extends AbstractRectorTestCase
 {
     /**
@@ -14,7 +18,6 @@ final class EmptyToCountTest extends AbstractRectorTestCase
      */
     public function test(string $file): void
     {
-        var_dump($file);
         $this->doTestFile($file);
     }
 
@@ -28,7 +31,7 @@ final class EmptyToCountTest extends AbstractRectorTestCase
 
     protected function getRectorClass(): string
     {
-        return IsNullToIssetRector::class;
+        return EmptyToCountRector::class;
     }
 
     public function provideConfigFilePath(): string
