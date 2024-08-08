@@ -1,0 +1,9 @@
+parameters:
+	level: max
+	paths:
+		- src
+	bootstrapFiles:
+		- vendor/autoload.php
+		- vendor/symplify/easy-coding-standard/vendor/autoload.php
+	excludePaths:
+		- */flycheck*
