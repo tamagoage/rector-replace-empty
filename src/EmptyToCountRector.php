@@ -13,6 +13,7 @@ use PhpParser\Node\Expr\ConstFetch;
 use PhpParser\Node\Expr\Empty_;
 use PhpParser\Node\Expr\FuncCall;
 use PhpParser\Node\Name;
+use PhpParser\Node\Scalar\DNumber;
 use PhpParser\Node\Scalar\LNumber;
 use PhpParser\Node\Scalar\String_;
 use PHPStan\Type\VerbosityLevel;
@@ -88,7 +89,7 @@ final class EmptyToCountRector extends AbstractRector
         }
 
         if (!$subjectType->isFloat()->no()) {
-            $possibleEmptyValues[] = new LNumber(0.0);
+            $possibleEmptyValues[] = new DNumber(0.0);
         }
 
         if (count($possibleEmptyValues) === 1) {
